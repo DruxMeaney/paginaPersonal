@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Formulario',
+    'AppFormulario',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'Proyecto1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r"Plantillas"],
+        'DIRS': [r"Plantillas/templates/pagina"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
