@@ -1,0 +1,25 @@
+{% extends "AppFormulario/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    <h1 class="mb-5">Inscribete a una charla</h1>
+{% endblock %}
+
+{% block icon %}
+
+
+{% endblock %}
+
+{% block formularios %}
+<p>Estoy en inscripción</p>
+
+<form action="{% url 'inscripcionFormulario' %}" method="POST"> {% csrf_token %}
+
+    <p>Nombre: <input type="text" name="nombre"> </p>
+    <p>Identificador: <input type="text" name="identificador"> </p>
+    <input type="submit" value="ENVIAR">
+
+</form>
+
+{% endblock %}
