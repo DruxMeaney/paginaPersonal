@@ -3,7 +3,8 @@
 {% load static %}
 
 {% block titulo %}
-    <h1 class="mb-5">Inscribete a una charla</h1>
+    <h1 class="mb-5">Bienvenidos a Charlas</h1>
+    <h2 class="mb-5">(Inscríbete a cualquiera)</h2>
 {% endblock %}
 
 {% block icon %}
@@ -12,12 +13,26 @@
 {% endblock %}
 
 {% block formularios %}
-<p>Estoy en inscripción</p>
+
+<h2>Charlas de este mes:</h2>
+<li>Diferencia entre medicamento y drogas. Charla: 2023</li>
+<li>Los medicaments de neuva generación. Charla: 2025</li>
+<li>Quinolonas y el riesgo cardiaco. Charla: 3025</li>
+<br>
+<h2>Inscríbete a aquí a caualquier charla</h2>
+
+<p></p>
+
+
+
 
 <form action="{% url 'inscripcionFormulario' %}" method="POST"> {% csrf_token %}
 
-    <p>Nombre: <input type="text" name="nombre"> </p>
-    <p>Identificador: <input type="text" name="identificador"> </p>
+    <table>
+        
+        {{ formulario.as_table }}
+    
+    </table>
     <input type="submit" value="ENVIAR">
 
 </form>

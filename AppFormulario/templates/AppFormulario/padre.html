@@ -21,6 +21,23 @@
     </head>
     <body>
         <!-- Navigation-->
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-light bg-light static-top">
+                    <div class="container">
+                        <!--<a class="navbar-brand" href="#!">Start Bootstrap</a>-->
+                        <a class="btn btn-primary" href="{% url 'inicio' %}">Inicio</a>
+                        <a class="btn btn-primary" href="{% url 'inscripcionFormulario' %}">Charlas</a>
+                        <a class="btn btn-primary" href="{% url 'registro' %}">Registro</a>
+                        <a class="btn btn-primary" href="{% url 'encuesta' %}">Encuesta</a>
+                        
+                    </div>
+                </nav>
+                {% block icon %}            
+              
+                {% endblock %}
+            </div>
+        </div>
         <!-- Masthead-->
         <header class="masthead">
             <div class="container position-relative">
@@ -38,24 +55,7 @@
             </div>
         </header>
         <!-- Icons Grid-->
-        <section class="features-icons bg-light text-center">
-            <div class="container">
-                <div class="row">
-                    <nav class="navbar navbar-light bg-light static-top">
-                        <div class="container">
-                            <!--<a class="navbar-brand" href="#!">Start Bootstrap</a>-->
-                            <a class="btn btn-primary" href="{% url 'inicio' %}">Inicio</a>
-                            <a class="btn btn-primary" href="{% url 'registro' %}">Registro</a>
-                            <a class="btn btn-primary" href="#signup">Encuesta</a>
-                            <a class="btn btn-primary" href="{% url 'inscripcion' %}">Incripcion</a>
-                        </div>
-                    </nav>
-                    {% block icon %}            
-                  
-                    {% endblock %}
-                </div>
-            </div>
-        </section>
+        
         <!-- Image Showcases-->
         {% block formularios %}
 

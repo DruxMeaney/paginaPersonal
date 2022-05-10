@@ -3,13 +3,32 @@
 {% load static %}
 
 
+{% block titulo %}
+    <h1 class="mb-5">Forma parte de la comunidad</h1>
+    <h2 class="mb-5">(regístrate)</h2>
+{% endblock %}
+
 {% block icon %}
-
-
 
 
 {% endblock %}
 
 {% block formularios %}
-<p>Estoy en registro</p>
+<h2>Regístrate para recibir las últimas noticias</h2>
+
+<p></p>
+
+
+
+
+<form action="{% url 'registro' %}" method="POST"> {% csrf_token %}
+
+    <table>
+        
+        {{ formulario.as_table }}
+    
+    </table>
+    <input type="submit" value="REGISTRAR">
+
+</form>
 {% endblock %}

@@ -20,9 +20,18 @@ def inscripcion(request):
 def inscripcionFormulario(request):
 
     if request.method == 'POST':
-        print(request.POST)
+       
+        miFormulario=InscripcionFormulario(request.POST)
 
-    return render(request, "AppFormulario\inscripcionFormulario.html")
+        if miFormulario.is_valid():
+            informacion=miFormulario.cleaned_data
+            inscripcion=Inscripcion(charla=informacion['charla'], nombre=informacion['nombre'], profesion=informacion['profesion'], email=informacion['email'] )
+            inscripcion.save()
+            return render(request, "AppFormulario/inicio.html")
+    else:
+        miFormulario=InscripcionFormulario()
+
+        return render(request, "AppFormulario\inscripcionFormulario.html", {'formulario':miFormulario})
     
 
 def registro(request):
@@ -30,7 +39,6 @@ def registro(request):
 
         miFormulario = RegistroFormulario(request.POST) #aquí mellega toda la información del html
 
-        print(miFormulario)
 
         if miFormulario.is_valid:   #Si pasó la validación de Django
 
@@ -38,20 +46,33 @@ def registro(request):
 
             persona = Registro (nombre=informacion['nombre'], apellido=informacion['apellido'],
             email=informacion['email'], profesion=informacion['profesion']) 
-
             persona.save()
-
             return render(request, "AppFormulario/inicio.html") #Vuelvo al inicio o a donde quieran
 
     else: 
 
         miFormulario= RegistroFormulario() #Formulario vacio para construir el html
 
-    return render(request, "AppFormulario/registro.html", {"miFormulario":miFormulario})
+        return render(request, "AppFormulario/registro.html", {"formulario":miFormulario})
 
-def estudiantes(request):
-    return HttpResponse("Esta es la página de estudiantes")
+def encuesta(request):
+    if request.method == 'POST':
+
+        miFormulario = Encuesta(request.POST) #aquí mellega toda la información del html
 
 
-def entregables(request):
-    return HttpResponse("Esta es la página de entregables")
+        if miFormulario.is_valid:   #Si pasó la validación de Django
+
+            informacion = miFormulario.cleaned_data
+
+            pregunta = Encuesta (pregunta1=informacion['pregunta1'], pregunta2=informacion['pregunta2'],
+            pregunta3=informacion['pregunta3'], pregunta4=informacion['pregunta4']) 
+            pregunta.save()
+            return render(request, "AppFormulario/encuesta.html") #Vuelvo al inicio o a donde quieran
+
+    else: 
+
+        miFormulario= Encuesta() #Formulario vacio para construir el html
+
+        return render(request, "AppFormulario/encuesta.html", {"formulario":miFormulario})
+
