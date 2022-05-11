@@ -7,15 +7,15 @@ http//:www........./AppFormulario
 
 En AppFormulario tendrás 4 botones. Sin contar el que te regresa al incio, puede elegir entre: 
 
-2. EL boton Registro para registrarte con tu correo electrónico y así  recibir noticas mensuales sobre el colectivo SmartDrugs.
+2. El boton Registro para registrarte con tu correo electrónico y así  recibir noticas mensuales sobre el colectivo SmartDrugs.
 
-3. En el boton de Charlas podrás inscribirte a las charlas que estaremos transmiitiendo en vivo anotando el ID de la charla, tu nombre, tu profesión y tu corre electrónico para que te llegue toda la información sobre la charla: horario, liga para la transmisión en facebook, y el lugar donde se realizará la charla por si prefieres asisitir de manera presencial. 
+3. En el boton de Charlas podrás inscribirte a las charlas que estaremos transmitiendo en vivo anotando el ID de la charla, tu nombre, tu profesión y tu correo electrónico para que te llegue toda la información sobre la charla: horario, liga para la transmisión en facebook, y el lugar donde se realizará la charla por si prefieres asisitir de manera presencial. 
 
-4. En el botón de Encuesta podrás realizar encuestas que estaremos realizando acerca de temas que te interesen saber o sobre algún tema discutido en alguna charla. 
+4. En el botón de Encuesta podrás realizar encuestas que estaremos publicando acerca de temas qué te gustaría saber o sobre algún tema discutido en alguna charla. 
 
-5. Aún me falta desarrolar una sección para buscar algún registro de algún fomrulario. 
+5. Aún me falta desarrollar una sección para buscar algún registro de algún fomrulario. 
 
 
-Nota: De antemano, pido una disculpa por no haber terminado la consigna completa (por el 5to punto, la funcionalidad de búsqueda). Por otra parte, en el colectivo particpa una compañera que es experta en CSS, así que con esto espro poder ser yo el Backend y ella el frontend. 
+Nota: De antemano, pido una disculpa por no haber terminado la consigna completa (por el 5to punto, la funcionalidad de búsqueda). Por otra parte, en el colectivo participa una compañera que es experta en CSS, así que con esto espero poder ser yo el Backend y ella el frontend. 
 
 MUCHAS GRACIAS POR TODO. :3 :D <3
